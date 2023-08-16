@@ -1,4 +1,4 @@
-# AkaiVisionROS
+# AkaiVision
 
 ## 引用
 [海康相机ROS驱动](https://github.com/luckyluckydadada/HIKROBOT-MVS-CAMERA-ROS)
