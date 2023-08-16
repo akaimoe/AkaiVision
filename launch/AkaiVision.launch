@@ -1,0 +1,21 @@
+<launch>
+    <rosparam file="$(find hikrobot_camera)/config/camera.yaml" command="load"/>
+    <node pkg="hikrobot_camera" type="hikrobot_camera" name="hikrobot_camera" respawn="true" output="screen" /> 
+    <!-- 
+    pkg指出ROS应该运行哪个pkg
+    type是可执行文件的名称
+    name则是可以任意给出的，它覆盖了原文件中ros::init指定的node的名字
+    output = "screen"：将节点的标准输出打印到终端屏幕，默认输出为日志文档；
+    respawn = "true"：复位属性，该节点停止时，会自动重启，默认为false；
+    required = "true"：必要节点，当该节点终止时，launch文件中的其他节点也被终止；
+    ns = "namespace"：命名空间，为节点内的相对名称添加命名空间前缀；
+    args = "arguments"：节点需要的输入参数。 -->
+
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find hikrobot_camera)/rviz_config/hikrobot.rviz" /> -->
+
+    <node pkg="SerialDriver" type="SerialDriverMain" name="SerialDriver" respawn="true" output="screen" />
+
+    <node pkg="PoseSolver" type="PoseSolverMain" name="PoseSolver" respawn="true" output="screen" />
+
+    <node pkg="ArmorDet" type="ArmorDetMain" name="ArmorDet" respawn="true" output="screen" />
+</launch>

@@ -1,0 +1,92 @@
+{
+  "robotName": "Akai's Vision Robot",
+  // "serialPort": {
+  //   "portName": "/dev/ttyTHS2",
+  //   "baudrate": 115200,
+  //   "parity": 0,
+  //   "dataBit": 8,
+  //   "stopBit": 1,
+  //   "synchronize": true,
+  //   "sendInterval": 0 // ms
+  // },
+  "imageLoader": {
+    "ImgPath": "/home/altair/img",
+    "FrameWidth": 1440,
+    "FrameHeight": 1080,
+    "MyColor": 1, // 0 for unknown, 1 for red, 2 for blue
+    "VisionMode": 3 // 0 for disable, 1 for aimbot, 2 for constant windmill, 3 for sine windmill
+  },
+  // "aimbot": {
+  //   "thresBrightness": 20,
+  //   "thresColor": 100,
+  //   "lightBarMinArea": 25.0,
+  //   "lightBarMaxArea": 5000.0,
+  //   "lightBarContourMinSolidity": 0.5,
+  //   "lightBarEllipseMinAspectRatio": 1.5,
+  //   "lightBarEllipseMaxAspectRatio": 10,
+  //   "armorMaxAngleDiff": 4,
+  //   "armorMaxHeightDiffRatio": 0.6,
+  //   "armorMaxYDiffRatio": 2.0,
+  //   "armorMinXDiffRatio": 0.5,
+  //   "armorBigArmorRatio": 3.5,
+  //   "armorSmallArmorRatio": 2.0,
+  //   "armorMinAspectRatio": 1.0,
+  //   "armorMaxAspectRatio": 4.3,
+  //   "areaNormalizedBase": 1000.0,
+  //   "sightOffsetNormalizedBase": 200.0,
+  //   "fireBiasYawSmall": 2,
+  //   "fireBiasPitchSmall": 1.8,
+  //   "fireBiasYawBig": 4,
+  //   "fireBiasPitchBig": 1.8,
+  //   "continousFireCount": 10
+  // },
+  "aimbot": {
+    "LightAspectRatioMax": 10,
+    "LightAspectRatioMin": 1.5,
+    "LightAreaMax": 5000.0,
+    "LightAreaMin": 25.0,
+    "LightAngleMax": 10,
+    "LightMaxDiffRatioY": 2.0,
+    "LightMinDiffRatioX": 0.5,
+    "ArmorMaxAspectRatio": 4.3,
+    "ArmorMinAspectRatio": 1.0,
+    "LightAngleDiff": 4,
+    "LightLenDiff": 0.6,
+    "LightAreaDiffRatio": 3,
+    "ArmorLightAreaDiffRatio": 0.5,
+    "BigArmorRatio": 3.5,
+    "ModlePath": "/home/altair/ros/AkaiVision/modle/test.onnx",
+    "ThresHoldColor": 100,
+    "ThresHoldBrightness": 20
+  },
+  // "windmill": {
+  //   "thresBrightness": 30,
+  //   "thresColor": 80,
+  //   "hammerMinArea": 10000,
+  //   "hammerMaxArea": 6000,
+  //   "hammerMinAspectRatio": 1.4,
+  //   "hammerMaxAspectRatio": 3,
+  //   "centerMinArea": 400,
+  //   "centerMaxArea": 1500,
+  //   "centerMinAspectRatio": 0.8,
+  //   "centerMaxAspectRatio": 1.5,
+  //   "minRadius": 50,
+  //   "maxRadius": 1000,
+  //   "timeDelaySmallBuff": 0.5, // s
+  //   "timeDelayBigBuff": 0.5, // s
+  //   "fireBiasYaw": 2.5,
+  //   "fireBiasPitch": 2.5
+  // },
+  "poseSolver": {
+    "cameraToBarrelX": 0.0,
+    "cameraToBarrelY": -50.5,
+    "cameraToBarrelZ": 0.0,
+    "initV": 27.0,
+    "initK": 0.026,
+    "gravity": 9.8,
+    "scaleDist": 1.0,
+    "kalmanDt": 10, // ms
+    // "windmillPitchAdd": -3.8, // degree
+    // "windmillYawAdd": -0.5 // degree
+  }
+}
