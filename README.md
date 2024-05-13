@@ -67,6 +67,9 @@ sudo usermod -aG dialout your_username
 3. 若使用其他型号的相机，自行替换camera节点并修改订阅内容即可
 4. 串口通讯协议可根据自身需求在serialdriver节点修改
 
+## TODO
+最近玩了一下YOLOV8，感觉爽的一批，等啥时候有时间了更新一下项目里面的识别模型  2024/5/13
+
 ## 问题
 若有问题或建议~~或者来找我玩原神~~，可直接发issues或者通过以下方式来联系我： [![](https://img.shields.io/badge/Telegram-Akai%20moe-white?style=flat&logo=telegram)](https://t.me/akai_moe) 
 
